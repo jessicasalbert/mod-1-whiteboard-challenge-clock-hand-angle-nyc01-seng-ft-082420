@@ -10,12 +10,12 @@ def clock_angle(time)
     hourDegrees = (time[0].to_i * 30) + minutes * 0.5
   end
 
-  if hourDegrees > minuteDegrees
+  if (hourDegrees - minuteDegrees).abs() == 360.0 || hourDegrees - minuteDegrees == 0
+    return 0
+  elsif hourDegrees > minuteDegrees
     hourDegrees - minuteDegrees
   elsif hourDegrees < minuteDegrees
     360 - (minuteDegrees - hourDegrees)
-  elsif (hourDegrees - minuteDegrees).abs() == 360.0 || hourDegrees - minuteDegrees == 0
-    return 0
   end
 
 end
