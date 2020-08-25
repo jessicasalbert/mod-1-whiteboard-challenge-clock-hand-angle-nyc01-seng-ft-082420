@@ -14,7 +14,7 @@ def clock_angle(time)
     hourDegrees - minuteDegrees
   elsif hourDegrees < minuteDegrees
     360 - (minuteDegrees - hourDegrees)
-  elsif (hourDegrees - minuteDegrees).abs() == 360 || hourDegrees - minuteDegrees == 0
+  elsif (hourDegrees - minuteDegrees).abs() == 360.0 || hourDegrees - minuteDegrees == 0
     0
   end
 
