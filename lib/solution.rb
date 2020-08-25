@@ -11,9 +11,11 @@ def clock_angle(time)
   end
 
   if hourDegrees > minuteDegrees
-    return hourDegrees - minuteDegrees
+    hourDegrees - minuteDegrees
+  elsif hourDegrees < minuteDegrees
+    360 - (minuteDegrees - hourDegrees)
   else
-    return 360 - (minuteDegrees - hourDegrees)
+    0
   end
 
 end
