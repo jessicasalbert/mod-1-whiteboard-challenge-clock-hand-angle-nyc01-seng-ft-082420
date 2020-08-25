@@ -14,7 +14,7 @@ def clock_angle(time)
     hourDegrees - minuteDegrees
   elsif hourDegrees < minuteDegrees
     360 - (minuteDegrees - hourDegrees)
-  else
+  elsif abs
     0
   end
 
